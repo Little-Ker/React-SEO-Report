@@ -1,0 +1,85 @@
+.root
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+  .messageBox
+    cursor: pointer
+    width: 540px
+    min-height: 500px
+    box-shadow: 0 0 10px #000
+    background-color: #f4f5f7
+    border-radius: 10px
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px
+    .header
+      padding: 1rem
+      display: flex
+      justify-content: flex-start
+      border-bottom: 1px solid #ccc
+    .content
+      padding: 24px
+    .user
+      display: flex
+      gap: .3rem
+      align-items: flex-start
+      margin-bottom: 1rem
+      opacity: 0
+      transition: .3s all
+      &.show
+        opacity: 1
+      &.localUser
+        flex-direction: row-reverse
+        .name
+          align-self: flex-end
+        .message
+          background: #c2efbc
+        .photo
+          border-color: #173413
+          background: #87cd98
+          color: #163b11
+      .photo
+        border: 2px solid #2828d7
+        background: #8bb9ff
+        color: #131364
+        font-weight: bold
+        width: 24px
+        height: 26px
+        padding-left: 2px
+        border-radius: 50rem
+        display: flex
+        justify-content: center
+        align-items: center
+      .detail
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin: 0 .3rem
+      .name
+        color: #777
+        margin-bottom: .3rem
+      .message
+        padding: 10px 15px
+        box-shadow: rgba(86, 86, 86, 0.2) 0px 2px 8px 0px
+        background-color: #F4F6F8
+        border-radius: 5px
+        color: #333
+        position: relative
+        text-align: left
+        max-width: 250px
+        line-height: 1.5
+        .link
+          color: #0131d0
+          border-bottom: 1px solid #0131d0
+          cursor: pointer
+        .redText
+          color: #f30707
+          font-weight: bold
+  .title
+    font-size: 54px
+    color: #977D5C
+    margin-bottom: 1rem
+    font-weight: 700
+    margin-top: -3rem

@@ -1,0 +1,107 @@
+.root
+  position: relative
+  display: flex
+  .left, .textBox
+    width: 50%
+    height: 100vh
+  .left
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+  .img
+    width: 100%
+    height: 335px
+    position: relative
+    .imgDecorate
+      // position: absolute
+      width: 70%
+      box-shadow: 10px 10px 0 #3b342b
+      border-radius: 0.5rem
+      // opacity: 0
+      transition: .3s
+      &.showImg
+  .btn
+    // padding: .7rem 1.2rem
+    width: 200px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid #ba2929
+    margin-top: 2rem
+    color: #ba2929
+    border-radius: 5px
+    overflow: hidden
+    // background: #ffffff8f
+    cursor: pointer
+    position: relative
+    transition: .3s all
+    font-weight: bold
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+    &:hover
+      // border-color: #977D5C
+      // color: #977D5C
+      background: #ffffff14
+    .btnBg
+      position: absolute
+      width: 0%
+      height: 100%
+      background: #177535
+      left: 0
+      top: 0
+    .btnText
+      position: relative
+      z-index: 2
+      font-size: 1.2rem
+  .other
+    display: flex
+    align-items: center
+    margin-left: 7rem
+    visibility: hidden
+    opacity: 0
+    .link
+      color: #ffffff
+      border-bottom: 1px solid #ffffff
+      cursor: pointer
+      font-size: 1.2rem
+      &:hover
+        opacity: .7
+    .arrow
+      color: #fff
+      font-size: 3rem
+      transform: rotate(90deg)
+
+  .textBox
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-left: -3rem
+    margin-top: -3rem
+    .title
+      font-size: 54px
+      color: #977D5C
+      margin-bottom: 1rem
+      font-weight: 700
+    .text
+      font-size: 32px
+      margin: 2rem 0
+      color: #fff
+      text-align: left
+      // width: 70%
+      line-height: 1.5
+      align-self: flex-start
+      .textDeco
+        position: relative
+        color: #977D5C
+        font-weight: bold
+        &::before
+          content: ''
+          width: 100%
+          height: 4px
+          background: #977D5C
+          position: absolute
+          left: 0
+          bottom: -5px
+          border-radius: 10px

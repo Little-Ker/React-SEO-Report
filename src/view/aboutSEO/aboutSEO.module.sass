@@ -1,0 +1,62 @@
+.root
+  position: relative
+  display: flex
+  .img, .textBox
+    width: 50%
+    height: 100vh
+  .img
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    .imgDecorate
+      position: absolute
+      width: 70%
+      box-shadow: 10px 10px 0 #3b342b
+      border-radius: 0.5rem
+      // opacity: 0
+      // transition: .3s
+      // &.showImg
+      //   opacity: 1
+  .textBox
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-left: -3rem
+    margin-top: -1rem
+    .title
+      font-size: 54px
+      color: #977D5C
+      margin-bottom: 1rem
+      font-weight: 700
+      display: flex
+      align-items: center
+      img
+        margin: 0 2rem
+    .texts
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .text
+        font-size: 32px
+        margin: 1.2rem 0
+        color: #fff
+        text-align: left
+        position: relative
+        align-self: flex-start
+        cursor: pointer
+        &::before
+          content: ''
+          width: 0
+          height: 15px
+          background: rgba(#977D5C, 0.7)
+          position: absolute
+          bottom: 1px
+          left: 0
+          transition: .6s all
+          z-index: -1
+          border-radius: .5rem
+        &.showTextDecorate::before, &:hover::before
+          width: 100%
