@@ -17,7 +17,7 @@ export default function Nav(props) {
       posIndex: 6,
     }, {
       title: '最終結果',
-      posIndex: 10,
+      posIndex: 9,
     }]
   }, [])
 
@@ -27,7 +27,7 @@ export default function Nav(props) {
         className={clsx(styles.boxBg,
           (pageIndex >= 2 && styles.boxPos1),
           (pageIndex >= 6 && styles.boxPos2),
-          (pageIndex >= 10 && styles.boxPos3))}
+          (pageIndex >= 9 && styles.boxPos3))}
       >
         <div className={styles.box}></div>
       </div>

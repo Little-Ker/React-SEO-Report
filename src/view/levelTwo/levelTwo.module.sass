@@ -1,107 +1,92 @@
 .root
-  position: relative
   display: flex
-  .left, .textBox
-    width: 50%
-    height: 100vh
-  .left
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-  .img
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  .title
+    max-width: 1100px
     width: 100%
-    height: 335px
+    font-size: 54px
+    color: #977D5C
+    font-weight: 700
+    text-align: left
+    margin-top: 1rem
+    margin-bottom: 3rem
+  .swiper
+    max-width: 1100px
+    width: 80%
+    height: 500px
     position: relative
-    .imgDecorate
-      // position: absolute
-      width: 70%
-      box-shadow: 10px 10px 0 #3b342b
-      border-radius: 0.5rem
-      // opacity: 0
-      transition: .3s
-      &.showImg
-  .btn
-    // padding: .7rem 1.2rem
-    width: 200px
-    height: 60px
-    display: flex
-    justify-content: center
-    align-items: center
-    border: 2px solid #ba2929
-    margin-top: 2rem
-    color: #ba2929
-    border-radius: 5px
-    overflow: hidden
-    // background: #ffffff8f
-    cursor: pointer
-    position: relative
-    transition: .3s all
-    font-weight: bold
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
-    &:hover
-      // border-color: #977D5C
-      // color: #977D5C
-      background: #ffffff14
-    .btnBg
+    z-index: 9999
+    .swiperSlide
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      .aa
+        padding: 0 4rem
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        .img
+          height: 100%
+          &.img03
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            margin-right: .7rem
+        .text
+          color: #fff
+          font-size: 2rem
+          margin-left: 1rem
+          margin-top: 6rem
+          text-align: left
+          align-self: flex-start
+          .top
+            font-size: 2.5rem
+            margin-bottom: 3rem
+            position: relative
+            justify-self: flex-start
+            &::before
+              content: ""
+              position: absolute
+              width: calc(100% + 100px)
+              height: 10px
+              background: #977D5C
+              bottom: -2rem
+              left: -1.7rem
+            .cross
+              font-size: 3.5rem
+              position: absolute
+              color: red
+              top: .2rem
+              filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.9))
+
+          .bottom
+            min-width: 450px
+            max-width: 450px
+            line-height: 1.8
+    .swiperButton
       position: absolute
-      width: 0%
-      height: 100%
-      background: #177535
-      left: 0
-      top: 0
-    .btnText
-      position: relative
-      z-index: 2
-      font-size: 1.2rem
-  .other
-    display: flex
-    align-items: center
-    margin-left: 7rem
-    visibility: hidden
-    opacity: 0
-    .link
-      color: #ffffff
-      border-bottom: 1px solid #ffffff
+      left: -1rem
+      top: 180px
+      transition: .3s all
+      color: #977D5C
+      z-index: 99
       cursor: pointer
-      font-size: 1.2rem
+      .icon
+        font-size: 84px
+        transform: rotateY(30deg)
+      &.swiperNextBtn
+        left: auto
+        right: -1rem
+        transform: rotate(180deg)
       &:hover
         opacity: .7
-    .arrow
-      color: #fff
-      font-size: 3rem
-      transform: rotate(90deg)
-
-  .textBox
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    margin-left: -3rem
-    margin-top: -3rem
-    .title
-      font-size: 54px
-      color: #977D5C
-      margin-bottom: 1rem
-      font-weight: 700
-    .text
-      font-size: 32px
-      margin: 2rem 0
-      color: #fff
-      text-align: left
-      // width: 70%
-      line-height: 1.5
-      align-self: flex-start
-      .textDeco
-        position: relative
-        color: #977D5C
-        font-weight: bold
-        &::before
-          content: ''
-          width: 100%
-          height: 4px
-          background: #977D5C
-          position: absolute
-          left: 0
-          bottom: -5px
-          border-radius: 10px
+:global(.swiper-button-disabled)
+  opacity: .3
+  cursor: default
+  &:hover
+    opacity: .3 !important
+    cursor: default !important

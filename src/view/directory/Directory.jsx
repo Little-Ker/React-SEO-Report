@@ -10,10 +10,10 @@ const Directory = () => {
       subTitle: ['需求起源', '何謂 SEO', '為何「效能」影響 SEO'],
     }, {
       title: '優化過程',
-      subTitle: ['第一階段：分數看的見', '第二階段：'],
+      subTitle: ['第一階段：分數提升', '第二階段：各種嘗試法'],
     }, {
       title: '最終結果',
-      subTitle: ['什麼是 Lottie', 'Lottie 套件'],
+      subTitle: ['評分網問題', '華麗↑ & 效能↓'],
     }]
   }, [])
 

@@ -28,7 +28,9 @@ import AboutRequirements from 'view/aboutRequirements'
 import AboutSEO from 'view/aboutSEO'
 import SEOEfficacy from 'view/SEOEfficacy'
 import LevelOne from 'view/levelOne'
-
+import LevelTwo from 'view/levelTwo'
+import SpeedPage from 'view/speedPage'
+import Efficacy from 'view/efficacy'
 // import SmartAnimateDemo from 'view/smartAnimateDemo'
 // import ImportAnim from 'view/importAnim'
 // import WhatLottie from 'view/whatLottie'
@@ -74,6 +76,19 @@ export default function App() {
   }, {
     title: '第一階段',
     view: <LevelOne />,
+  }, {
+    title: '第二階段',
+    view: <LevelTwo />,
+  }, {
+    title: '最終結果',
+    view: <AboutView title={'最終結果'} />,
+    titleBg: true,
+  }, {
+    title: 'Speed Page',
+    view: <SpeedPage />,
+  }, {
+    title: 'Efficacy',
+    view: <Efficacy />,
   }, {
     title: 'Thank You',
     view: <ThankYou />,
