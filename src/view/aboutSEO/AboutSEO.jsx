@@ -1,15 +1,10 @@
-import React, {
-  useState 
-} from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import styles from './aboutSEO.module.sass'
 
 import img from 'assets/images/aboutSEO/seo.png'
 
 export default function AboutSEO() {
-  const [showIndex, setShowIndex] = useState(-1)
-
-
   const textList = ['搜尋引擎優化', '讓網站在搜尋引擎中排名更高的方法']
 
   return (
@@ -27,8 +22,7 @@ export default function AboutSEO() {
           {textList.map((cur, index) => (
             <p
               key={`${index.toString()}`}
-              className={clsx(styles.text, index === showIndex && styles.showTextDecorate)}
-              onClick={() => setShowIndex(index)}
+              className={clsx(styles.text)}
             >
               {cur}
             </p>

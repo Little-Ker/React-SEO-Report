@@ -18,8 +18,6 @@ import 'swiper/css/effect-fade'
 
 import styles from './mainView.module.sass'
 
-import logo from 'assets/images/all/figma.png'
-
 import Nav from 'component/nav'
 import Home from 'view/home'
 import Directory from 'view/directory'
@@ -31,11 +29,6 @@ import LevelOne from 'view/levelOne'
 import LevelTwo from 'view/levelTwo'
 import SpeedPage from 'view/speedPage'
 import Efficacy from 'view/efficacy'
-// import SmartAnimateDemo from 'view/smartAnimateDemo'
-// import ImportAnim from 'view/importAnim'
-// import WhatLottie from 'view/whatLottie'
-// import LottieFiles from 'view/lottieFiles'
-// import LottieDemo from 'view/lottieDemo'
 import ThankYou from 'view/thankYou'
 
 export default function App() {

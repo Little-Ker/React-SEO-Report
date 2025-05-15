@@ -6,7 +6,6 @@ import React, {
 import styles from './levelOne.module.sass'
 import gsap from 'gsap'
 import img1 from 'assets/images/optimization/01.jpg'
-import img2 from 'assets/images/aboutFigma/smartAnim.png'
 
 import Magnifier from 'react-magnifier'
 
@@ -42,7 +41,7 @@ export default function LevelOne() {
       ease: 'power2.out',
       onComplete: () => {
         btnText.current.textContent = '容量優化完成'
-        setShowImg(img2)
+        setShowImg(img1)
       },
     }).to('#other',{
       delay: 1,
