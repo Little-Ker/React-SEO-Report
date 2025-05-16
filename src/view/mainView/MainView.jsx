@@ -151,8 +151,11 @@ export default function App() {
               {(index !== 0) && (
                 <p className={styles.title}>{'官網 SEO 效能優化'}</p>
               )}
-              {/* <img src={logo} className={styles.logo} alt="" /> */}
-              <div className={styles.view}>{cur.view}</div>
+              {Math.abs(pageIndex - index) <= 1 ? (
+                <div className={styles.view}>{cur.view}</div> // 只渲染前後一頁
+              ) : (
+                null
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
