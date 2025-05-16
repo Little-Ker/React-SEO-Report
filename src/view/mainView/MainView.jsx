@@ -2,7 +2,8 @@ import React, {
   useCallback,
   useRef,
   useMemo,
-  useState 
+  useState,
+  useEffect
 } from 'react'
 import clsx from 'clsx'
 
@@ -34,6 +35,28 @@ import ThankYou from 'view/thankYou'
 export default function App() {
   const [pageIndex, setPageIndex] = useState(0)
   const swiperRef = useRef()
+
+  const BASE_WIDTH = 1700
+  const BASE_HEIGHT = 900
+
+  const [scale, setScale] = useState(1)
+
+  useEffect(() => {
+    const updateScale = () => {
+      const winWidth = window.innerWidth
+      const winHeight = window.innerHeight
+
+      const scaleX = winWidth / BASE_WIDTH
+      const scaleY = winHeight / BASE_HEIGHT
+
+      const finalScale = Math.min(scaleX, scaleY)
+      setScale(finalScale)
+    }
+
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
 
   const swiperButtonNext = useCallback(() => {
     swiperRef.current.slideNext()
@@ -97,36 +120,48 @@ export default function App() {
   }, [pageIndex, navList])
 
   return (
-    <>
-      <Swiper
-        direction={'vertical'}
-        slidesPerView={1}
-        spaceBetween={0}
-        mousewheel={true}
-        onSlideChange={(swiperData) => {onChangeSlide(swiperData)}}
-        effect="fade"
-        modules={[Mousewheel, EffectFade, Keyboard]}
-        className={styles.swiper}
-        onSwiper={swiper => swiperRef.current = swiper}
-        keyboard={{
-          enabled: true,
-        }}
-      >
-        {navList.map((cur, index) => (
-          <SwiperSlide key={`${index.toString()}`} className={clsx(styles.slide, cur?.titleBg  && styles.titleBg)}>
-            {(index !== 0) && (
-              <p className={styles.title}>{'官網 SEO 效能優化'}</p>
-            )}
-            {/* <img src={logo} className={styles.logo} alt="" /> */}
-            <div className={styles.view}>{cur.view}</div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className={clsx(styles.nav,isShowNavAnim && styles.showNavAnim)}>
-        <Nav
-          pageIndex={pageIndex} swiperButtonJump={swiperButtonJump}
-        />
+    <div className={styles.root}>
+      <div style={{
+        width: `${BASE_WIDTH}px`,
+        height: `${BASE_HEIGHT}px`,
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: `translate(-50%, -50%) scale(${scale})`,
+        background: '#444',
+        color: '#fff',
+        overflow: 'hidden',
+      }}>
+        <Swiper
+          direction={'vertical'}
+          slidesPerView={1}
+          spaceBetween={0}
+          mousewheel={true}
+          onSlideChange={(swiperData) => {onChangeSlide(swiperData)}}
+          effect="fade"
+          modules={[Mousewheel, EffectFade, Keyboard]}
+          className={styles.swiper}
+          onSwiper={swiper => swiperRef.current = swiper}
+          keyboard={{
+            enabled: true,
+          }}
+        >
+          {navList.map((cur, index) => (
+            <SwiperSlide key={`${index.toString()}`} className={clsx(styles.slide, cur?.titleBg  && styles.titleBg)}>
+              {(index !== 0) && (
+                <p className={styles.title}>{'官網 SEO 效能優化'}</p>
+              )}
+              {/* <img src={logo} className={styles.logo} alt="" /> */}
+              <div className={styles.view}>{cur.view}</div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className={clsx(styles.nav,isShowNavAnim && styles.showNavAnim)}>
+          <Nav
+            pageIndex={pageIndex} swiperButtonJump={swiperButtonJump}
+          />
+        </div>
       </div>
-    </>
+    </div>
   )
 }
