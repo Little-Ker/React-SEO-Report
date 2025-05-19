@@ -54,8 +54,6 @@ export default function App() {
     }
 
     updateScale()
-    window.addEventListener('resize', updateScale)
-    return () => window.removeEventListener('resize', updateScale)
   }, [])
 
   const swiperButtonNext = useCallback(() => {
@@ -148,7 +146,7 @@ export default function App() {
         >
           {navList.map((cur, index) => (
             <SwiperSlide key={`${index.toString()}`} className={clsx(styles.slide, cur?.titleBg  && styles.titleBg)}>
-              {(index !== 0) && (
+              {(index > 0) && (
                 <p className={styles.title}>{'官網 SEO 效能優化'}</p>
               )}
               {Math.abs(pageIndex - index) <= 1 ? (
