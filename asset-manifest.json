@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-SEO-Report/static/css/main.14a906d9.css",
-    "main.js": "/React-SEO-Report/static/js/main.13221483.js",
+    "main.js": "/React-SEO-Report/static/js/main.3d9af166.js",
     "static/js/453.11011238.chunk.js": "/React-SEO-Report/static/js/453.11011238.chunk.js",
     "static/media/seo.png": "/React-SEO-Report/static/media/seo.d4fce36727d6f1670787.png",
     "static/media/SEO-Skills.png": "/React-SEO-Report/static/media/SEO-Skills.ee8e284a3fd6dc02c614.png",
@@ -15,11 +15,11 @@
     "static/media/seo2.jpg": "/React-SEO-Report/static/media/seo2.833f5bcab90fdbca7dc3.jpg",
     "index.html": "/React-SEO-Report/index.html",
     "main.14a906d9.css.map": "/React-SEO-Report/static/css/main.14a906d9.css.map",
-    "main.13221483.js.map": "/React-SEO-Report/static/js/main.13221483.js.map",
+    "main.3d9af166.js.map": "/React-SEO-Report/static/js/main.3d9af166.js.map",
     "453.11011238.chunk.js.map": "/React-SEO-Report/static/js/453.11011238.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14a906d9.css",
-    "static/js/main.13221483.js"
+    "static/js/main.3d9af166.js"
   ]
 }
