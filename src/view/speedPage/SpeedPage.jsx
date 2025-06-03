@@ -11,6 +11,8 @@ import {
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 
+import img1 from 'assets/images/speedPage/01.jpg'
+
 // import required modules
 import {
   EffectCards 
@@ -30,7 +32,7 @@ export default function SpeedPage() {
   ]
 
   const cardsList = [{
-    img: '01',
+    img: img1,
   }, {
     img: '02',
   },{
@@ -67,7 +69,7 @@ export default function SpeedPage() {
               key={`${index.toString()}`}
               onClick={handleNextClick}
             >
-              {item.img}
+              <img src={item.img} alt="" />
             </SwiperSlide>
           ))}
         </Swiper>
