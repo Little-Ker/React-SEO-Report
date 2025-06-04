@@ -65,7 +65,7 @@ export default function LevelOne() {
         </div>
         <div id={'other'} className={styles.other}>
           <p className={styles.arrow}>⤴︎</p>
-          <a className={styles.link} target="_blank" href="https://pagespeed.web.dev/analysis/https-gp001-qa1-website-vertexplay-com-en/88867vh78p?form_factor=mobile" rel="noreferrer">{'VP官網效能報告書v2_連結'}</a>
+          <a className={styles.link} target="_blank" href="https://pagespeed.web.dev/analysis/https-vertexplay-com-zh-Hans/yn76il0iav?form_factor=desktop" rel="noreferrer">{'VP官網效能報告書v2_連結'}</a>
         </div>
         
       </div>

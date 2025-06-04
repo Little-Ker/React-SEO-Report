@@ -11,7 +11,10 @@ import {
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 
-import img1 from 'assets/images/speedPage/01.jpg'
+import img1 from 'assets/images/speedPage/03.jpg'
+import img2 from 'assets/images/speedPage/01.jpg'
+import img3 from 'assets/images/speedPage/04.jpg'
+import img4 from 'assets/images/speedPage/05.jpg'
 
 // import required modules
 import {
@@ -34,13 +37,11 @@ export default function SpeedPage() {
   const cardsList = [{
     img: img1,
   }, {
-    img: '02',
+    img: img2,
   },{
-    img: '03',
+    img: img3,
   },{
-    img: '04',
-  },{
-    img: '05',
+    img: img4,
   }]
 
   const handleNextClick = () => {
