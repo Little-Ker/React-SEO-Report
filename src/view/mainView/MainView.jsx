@@ -137,6 +137,7 @@ export default function App() {
           mousewheel={true}
           onSlideChange={(swiperData) => {onChangeSlide(swiperData)}}
           effect="fade"
+          simulateTouch={false}
           modules={[Mousewheel, EffectFade, Keyboard]}
           className={styles.swiper}
           onSwiper={swiper => swiperRef.current = swiper}

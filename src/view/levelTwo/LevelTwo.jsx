@@ -28,7 +28,7 @@ export default function LevelTwo() {
   }, {
     img: img2,
     title: '使用者點擊前往方式',
-    describe: '對SEO沒幫助',
+    describe: '對 SEO 排行沒幫助',
     'class': styles.img02,
   }, {
     img: img3,
