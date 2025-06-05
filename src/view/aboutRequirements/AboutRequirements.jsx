@@ -15,7 +15,7 @@ export default function AboutRequirements() {
   }, {
     imgText: 'R',
     user: 'R企劃',
-    message: <a className={styles.link} target="_blank" href="https://pagespeed.web.dev/analysis/https-vertexplay-com-zh-Hans/mhgsseuwkc?form_factor=mobile" rel="noreferrer">{'VP官網效能報告書_連結'}</a>,
+    message: <a className={styles.link} target="_blank" href="https://pagespeed.web.dev/analysis/https-gp001-dev-website-vertexplay-com-zh-Hans/i6sfj4s3vm?form_factor=desktop" rel="noreferrer">{'VP官網效能報告書_連結'}</a>,
   }, {
     imgText: 'R',
     user: 'R企劃',
